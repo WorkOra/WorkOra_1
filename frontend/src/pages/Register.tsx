@@ -41,9 +41,9 @@ const Register: React.FC = () => {
   ];
 
   const universities = [
-    'Harvard University', 'Stanford University', 'MIT', 'University of California',
-    'Yale University', 'Princeton University', 'Columbia University', 'University of Chicago',
-    'University of Pennsylvania', 'Duke University', 'Other'
+    'University of Colombo ', 'University of Peradeniya ', 'University of Sri Jayewardenepura', 'University of Kelaniya',
+    'University of Moratuwa', 'University of Jaffna', 'University of Ruhuna', 'University of Sabaragamuwa  ',
+    'Uva Wellassa University', 'Rajarata University of Sri Lanka', 'Other'
   ];
 
   const handleSubmit = async (e: React.FormEvent) => {
