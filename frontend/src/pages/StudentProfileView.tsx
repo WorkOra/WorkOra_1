@@ -92,6 +92,49 @@ const StudentProfileView: React.FC = () => {
           </div>
         </div>
       </div>
+
+      {/* Footer */}
+      <footer className="bg-white border-t border-gray-200 mt-12">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+          <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div>
+              <h3 className="text-lg font-semibold text-gray-900 mb-3">JobPortal</h3>
+              <p className="text-gray-600 text-sm">
+                Empowering students and employers to connect and grow together.
+              </p>
+            </div>
+            <div>
+              <h4 className="text-md font-semibold text-gray-900 mb-2">Quick Links</h4>
+              <ul className="text-gray-600 text-sm space-y-1">
+                <li><a href="/jobs" className="hover:text-blue-600">Jobs</a></li>
+                <li><a href="/register" className="hover:text-blue-600">Register</a></li>
+                <li><a href="/login" className="hover:text-blue-600">Login</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-md font-semibold text-gray-900 mb-2">Resources</h4>
+              <ul className="text-gray-600 text-sm space-y-1">
+                <li><a href="#" className="hover:text-blue-600">Help Center</a></li>
+                <li><a href="#" className="hover:text-blue-600">Privacy Policy</a></li>
+                <li><a href="#" className="hover:text-blue-600">Terms of Service</a></li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="text-md font-semibold text-gray-900 mb-2">Contact</h4>
+              <p className="text-gray-600 text-sm">
+                Email: support@jobportal.com <br />
+                Phone: +1 (123) 456-7890
+              </p>
+            </div>
+          </div>
+
+          <div className="mt-10 border-t border-gray-100 pt-6 text-center text-gray-500 text-sm">
+            © {new Date().getFullYear()} JobPortal. All rights reserved.
+          </div>
+        </div>
+      </footer>
+
+
     </div>
   );
 };
