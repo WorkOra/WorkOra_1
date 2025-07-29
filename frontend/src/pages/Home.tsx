@@ -128,6 +128,54 @@ const Home: React.FC = () => {
           )}
         </div>
       </div>
+
+            {/* Footer Section */}
+      <footer className="bg-gray-900 text-gray-300 py-10 mt-10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-4 gap-8">
+          
+          <div>
+            <h3 className="text-xl font-semibold text-white mb-4">JobPortal</h3>
+            <p className="text-sm text-gray-400">
+              Empowering students and employers through smart career connections.
+            </p>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-3">Explore</h4>
+            <ul className="space-y-2 text-sm">
+              <li><Link to="/jobs" className="hover:text-white">Browse Jobs</Link></li>
+              <li><Link to="/about" className="hover:text-white">About Us</Link></li>
+              <li><Link to="/contact" className="hover:text-white">Contact</Link></li>
+              <li><Link to="/faq" className="hover:text-white">FAQs</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-3">For Users</h4>
+            <ul className="space-y-2 text-sm">
+              <li><Link to="/register?type=student" className="hover:text-white">Register as Student</Link></li>
+              <li><Link to="/register?type=employee" className="hover:text-white">Register as Employer</Link></li>
+              <li><Link to="/login" className="hover:text-white">Login</Link></li>
+              <li><Link to="/profile" className="hover:text-white">My Profile</Link></li>
+            </ul>
+          </div>
+
+          <div>
+            <h4 className="text-lg font-semibold text-white mb-3">Contact</h4>
+            <p className="text-sm text-gray-400">
+              support@jobportal.com<br />
+              +1 (800) 123-4567<br />
+              123 Main Street, City, Country
+            </p>
+          </div>
+        </div>
+
+        <div className="border-t border-gray-700 mt-10 pt-6 text-center text-sm text-gray-500">
+          © {new Date().getFullYear()} JobPortal. All rights reserved.
+        </div>
+      </footer>
+
+
     </div>
   );
 };
