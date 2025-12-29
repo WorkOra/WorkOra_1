@@ -47,7 +47,7 @@ const Footer: React.FC = () => {
               >
                 <Linkedin className="w-5 h-5" />
               </a>
-               <a 
+              {/* <a 
                 href="https://twitter.com" 
                 target="_blank" 
                 rel="noopener noreferrer"
@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
                 aria-label="GitHub"
               >
                 <Github className="w-5 h-5" />
-              </a>
+              </a>*/}
               <a
                 href="https://facebook.com"
                 target="_blank"
