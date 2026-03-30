@@ -10,12 +10,18 @@ const Navbar: React.FC = () => {
   const isActive = (path: string) => location.pathname === path;
 
   return (
-    <nav className="bg-white shadow-lg border-b border-gray-200">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <nav className="relative overflow-hidden text-white bg-gradient-to-br from-gray-900 via-gray-800 to-gray-900 shadow-lg border-b border-gray-700">
+      {/* Decorative background elements */}
+      <div className="absolute top-0 right-0 bg-blue-600 rounded-full w-64 h-64 opacity-5 blur-3xl"></div>
+      <div className="absolute top-0 left-0 bg-purple-600 rounded-full w-64 h-64 opacity-5 blur-3xl"></div>
+      
+      <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="flex items-center space-x-2">
-            <Briefcase className="h-8 w-8 text-blue-600" />
-            <span className="text-xl font-bold text-gray-900">WorkOra</span>
+          <Link to="/" className="flex items-center space-x-2 group">
+            <Briefcase className="w-8 h-8 text-blue-400 transition-colors group-hover:text-blue-300" />
+            <span className="text-xl font-bold text-transparent bg-gradient-to-r from-blue-400 to-purple-400 bg-clip-text">
+              WorkOra
+            </span>
           </Link>
 
           <div className="flex items-center space-x-4">
@@ -23,13 +29,13 @@ const Navbar: React.FC = () => {
               <>
                 <Link
                   to="/jobs"
-                  className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  className={`flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium transition-all ${
                     isActive('/jobs')
-                      ? 'bg-blue-100 text-blue-700'
-                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                      ? 'bg-blue-600 text-white shadow-lg'
+                      : 'text-gray-300 hover:text-white hover:bg-gray-800'
                   }`}
                 >
-                  <Search className="h-4 w-4" />
+                  <Search className="w-4 h-4" />
                   <span>Find Jobs</span>
                 </Link>
 
@@ -37,24 +43,24 @@ const Navbar: React.FC = () => {
                   <>
                     <Link
                       to="/create-job"
-                      className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                      className={`flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium transition-all ${
                         isActive('/create-job')
-                          ? 'bg-blue-100 text-blue-700'
-                          : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                          ? 'bg-purple-600 text-white shadow-lg'
+                          : 'text-gray-300 hover:text-white hover:bg-gray-800'
                       }`}
                     >
-                      <PlusCircle className="h-4 w-4" />
+                      <PlusCircle className="w-4 h-4" />
                       <span>Create Job</span>
                     </Link>
                     <Link
                       to="/dashboard"
-                      className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                      className={`flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium transition-all ${
                         isActive('/dashboard')
-                          ? 'bg-blue-100 text-blue-700'
-                          : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                          ? 'bg-blue-600 text-white shadow-lg'
+                          : 'text-gray-300 hover:text-white hover:bg-gray-800'
                       }`}
                     >
-                      <Home className="h-4 w-4" />
+                      <Home className="w-4 h-4" />
                       <span>Dashboard</span>
                     </Link>
                   </>
@@ -63,34 +69,34 @@ const Navbar: React.FC = () => {
                 {user.userType === 'student' && (
                   <Link
                     to="/dashboard"
-                    className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                    className={`flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium transition-all ${
                       isActive('/dashboard')
-                        ? 'bg-blue-100 text-blue-700'
-                        : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                        ? 'bg-blue-600 text-white shadow-lg'
+                        : 'text-gray-300 hover:text-white hover:bg-gray-800'
                     }`}
                   >
-                    <Home className="h-4 w-4" />
+                    <Home className="w-4 h-4" />
                     <span>Dashboard</span>
                   </Link>
                 )}
 
                 <Link
                   to="/profile"
-                  className={`flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium transition-colors ${
+                  className={`flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium transition-all ${
                     isActive('/profile')
-                      ? 'bg-blue-100 text-blue-700'
-                      : 'text-gray-600 hover:text-gray-900 hover:bg-gray-100'
+                      ? 'bg-blue-600 text-white shadow-lg'
+                      : 'text-gray-300 hover:text-white hover:bg-gray-800'
                   }`}
                 >
-                  <User className="h-4 w-4" />
+                  <User className="w-4 h-4" />
                   <span>Profile</span>
                 </Link>
 
                 <button
                   onClick={logout}
-                  className="flex items-center space-x-1 px-3 py-2 rounded-md text-sm font-medium text-gray-600 hover:text-gray-900 hover:bg-gray-100 transition-colors"
+                  className="flex items-center space-x-1 px-3 py-2 rounded-lg text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-800 transition-all"
                 >
-                  <LogOut className="h-4 w-4" />
+                  <LogOut className="w-4 h-4" />
                   <span>Logout</span>
                 </button>
               </>
@@ -98,13 +104,13 @@ const Navbar: React.FC = () => {
               <>
                 <Link
                   to="/login"
-                  className="text-gray-600 hover:text-gray-900 px-3 py-2 rounded-md text-sm font-medium transition-colors"
+                  className="text-gray-300 hover:text-white px-3 py-2 rounded-lg text-sm font-medium transition-all hover:bg-gray-800"
                 >
                   Login
                 </Link>
                 <Link
                   to="/register"
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-md text-sm font-medium transition-colors"
+                  className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white px-4 py-2 rounded-lg text-sm font-medium transition-all transform hover:scale-105 shadow-lg"
                 >
                   Sign Up
                 </Link>
